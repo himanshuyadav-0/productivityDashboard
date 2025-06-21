@@ -55,8 +55,9 @@ section.allElems h2 {
 }
 
 .allElems header {
-    height: 320px;
+    height: 400px;
     width: 100%;
+
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -117,7 +118,7 @@ header .header2 h4 {
 
 .elem {
     font-size: 50px;
-    height: 330px;
+    height: 350px;
     width: 320px;
     overflow: hidden;
     position: relative;
