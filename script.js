@@ -105,7 +105,7 @@ function todolist() {
 
         if (taskInput.value.trim() === "") {
             const existingErrors = form.querySelectorAll(".error-msg");
-            if (existingErrors.length < 3) {
+            if (existingErrors.length < 2) {
                 let error = document.createElement("p");
                 error.innerText = "Task name cannot be empty!";
                 error.classList.add("error-msg");
@@ -169,10 +169,10 @@ function motivationQuote() {
     var motivationQuote = document.querySelector(".motivation-2 h1")
     var motivationAuthor = document.querySelector(".motivation-3 h2")
     async function fetchQuote() {
-        let response = await fetch('https://api.quotable.io/random')
+        let response = await fetch('https://api.quotable.io/quotes/random')
         let data = await response.json()
-        motivationQuote.innerHTML = data.content
-        motivationAuthor.innerHTML = data.author
+        motivationQuote.innerHTML = data[0].content
+        motivationAuthor.innerHTML = data[0].author
     }
     fetchQuote()
 }
